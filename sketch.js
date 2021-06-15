@@ -14,6 +14,8 @@ function buildGrid(newSize){
             gridSquare.style.cssText = 'background: black;';
         })   
     }
+    container.style.cssText = 'grid-template-columns: repeat(' + newSize + ', 1fr)';
+
 }
 
 startOver.addEventListener('click', () => {
