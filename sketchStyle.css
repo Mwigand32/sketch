@@ -2,7 +2,6 @@
     display: grid;
     height: 50vh;
     width: 50vh;
-    background: blue;
+    background: rgb(201, 201, 201);
     grid-template-columns: repeat(16, 1fr);
 }
-
