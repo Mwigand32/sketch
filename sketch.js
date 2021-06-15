@@ -12,8 +12,8 @@ function buildGrid(newSize){
         
         container.appendChild(gridSquare);
         gridSquare.addEventListener('mouseover', () => {
-            gridSquare.style.cssText = 'background: rgb(' + Math.floor(Math.random() * 255) + ', ' +
-            Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ');';
+            gridSquare.style.background = 'black';
+            gridSquare.style.opacity = (parseFloat(gridSquare.style.opacity) || 0) + 0.1;
         })   
     }
     container.style.cssText = 'grid-template-columns: repeat(' + newSize + ', 1fr)';
