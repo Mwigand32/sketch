@@ -5,13 +5,15 @@ const startOver = document.querySelector('#newSketch');
 
 
 function buildGrid(newSize){
+
     for (i = 1; i <= newSize * newSize; i++){
         const gridSquare = document.createElement('div');
         gridSquare.classList.add('gridSquare-' + i)
         
         container.appendChild(gridSquare);
         gridSquare.addEventListener('mouseover', () => {
-            gridSquare.style.cssText = 'background: black;';
+            gridSquare.style.cssText = 'background: rgb(' + Math.floor(Math.random() * 255) + ', ' +
+            Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ');';
         })   
     }
     container.style.cssText = 'grid-template-columns: repeat(' + newSize + ', 1fr)';
